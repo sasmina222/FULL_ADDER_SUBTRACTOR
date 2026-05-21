@@ -38,18 +38,57 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+Full Adder
+
+<img width="526" height="625" alt="image" src="https://github.com/user-attachments/assets/d455a3ae-2e65-453f-8bf6-2a05f67f5159" />
+
+Full Subtractor
+
+<img width="697" height="667" alt="image" src="https://github.com/user-attachments/assets/63afad4d-cd9a-4b54-8a54-fd2972f6f2ad" />
+
+
+
 **Procedure**
 
-Write the detailed procedure here
+Open the Verilog HDL software and create a new module for Full Adder and Full Subtractor.
+Declare the inputs a, b, cin and outputs sum, carry, DIFF, BO.
+Write the dataflow equations using assign statements for adder and subtractor outputs.
+Compile the Verilog code and remove any syntax errors if present.
+Simulate the program using a testbench and verify the outputs with the truth table.
+
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by:SASMINA S 
 
+RegisterNumber:212225230254
+*/
+~~~
+   module exp3de(a,b,cin,sum,carry);
+   input a,b,cin;
+   output sum,carry;
+   assign sum=( (a ^ b)^cin);
+   assign carry= ((a&b)| (cin&(a^b)));
+   endmodule
+~~~
 **RTL Schematic**
 
+Full Adder
+
+<img width="555" height="212" alt="image" src="https://github.com/user-attachments/assets/0f4680cf-c3ca-424d-b62a-48f45a5dd2bb" />
+
+Full Subtractor
+
+<img width="572" height="192" alt="image" src="https://github.com/user-attachments/assets/94dc6769-8bb4-4b4f-8be8-61e056bbb400" />
+
+
 **Output Timing Waveform**
+
+Full Adder 
+<img width="1287" height="324" alt="image" src="https://github.com/user-attachments/assets/475b2b9a-6661-40e6-ac9f-44ef1ee322a1" />
+Full Subtractor
+<img width="1204" height="265" alt="image" src="https://github.com/user-attachments/assets/a7cb2ec8-6c9f-4b48-8b76-626b64967a0b" />
+
 
 **Result:**
 
